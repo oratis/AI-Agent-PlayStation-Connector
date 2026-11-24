@@ -17,7 +17,8 @@ async function call(name, args) {
 
 try {
   await client.connect(new StreamableHTTPClientTransport(endpoint));
-  assert.equal(client.getServerVersion()?.name, "playstation-mcp");
+  assert.equal(client.getServerVersion()?.name, "ai-agent-playstation-connector");
+  assert.equal(client.getServerVersion()?.title, "AI Agent PlayStation Connector");
   const { tools } = await client.listTools();
   console.log(endpoint.href, tools.map((t) => t.name).join(", "));
   const list = await call("search_games", { query: "astro bot" });

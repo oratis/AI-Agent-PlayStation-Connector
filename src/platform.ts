@@ -3,7 +3,8 @@ import { DomUtils, parseDocument } from "htmlparser2";
 import { z } from "zod";
 import { annotations, limit, PublicSource, result, SourceError } from "./source.ts";
 
-export const name = "playstation-mcp";
+export const name = "ai-agent-playstation-connector";
+export const title = "AI Agent PlayStation Connector";
 export const instructions =
   "Read PlayStation editorial game pages, public Store offers and regional PlayStation Plus monthly lineups. Cite the region, page heading and source. The lineup describes the public offer. Personal PSN authorization is unavailable in this deployment. Owned games, trophies and account playtime are unavailable.";
 const region = z.enum(["en-us", "en-gb"]).default("en-us");
