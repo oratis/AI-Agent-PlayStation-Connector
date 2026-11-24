@@ -5,7 +5,7 @@ import { annotations, limit, PublicSource, result, SourceError } from "./source.
 
 export const name = "playstation-mcp";
 export const instructions =
-  "Read PlayStation editorial game pages, public Store offers and regional PlayStation Plus monthly lineups. Cite the region, page heading and source. The lineup describes the public offer.";
+  "Read PlayStation editorial game pages, public Store offers and regional PlayStation Plus monthly lineups. Cite the region, page heading and source. The lineup describes the public offer. Personal PSN authorization is unavailable in this deployment. Owned games, trophies and account playtime are unavailable.";
 const region = z.enum(["en-us", "en-gb"]).default("en-us");
 const slug = z
   .string()

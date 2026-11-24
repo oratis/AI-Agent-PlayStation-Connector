@@ -26,6 +26,18 @@ claude mcp add --transport http --scope user playstation https://playstation-mcp
 
 Start a new conversation in Codex or open `/mcp` in Claude Code to check the connection.
 
+## Can I connect my PSN account?
+
+The hosted connector has **public access only**. Sony supports authorized third-party apps, and players can unlink them from Account Management. The `oratis` deployment has no Sony-approved application or granted PSN gameplay-data scopes. Adding this URL therefore opens the public tools without a Sony consent screen. [Sony's authorized apps guide](https://www.playstation.com/en-us/support/account/manage-authorized-apps/) · [PlayStation Partners](https://partners.playstation.net/)
+
+| Personal data | Result in this release |
+| --- | --- |
+| Owned library and Plus entitlements | Unavailable. Store products and monthly promotions show what is offered in a region. |
+| Earned trophies | Unavailable. This deployment has no authorized trophy data source. |
+| Playtime per title | Unavailable. No account activity was retrieved. |
+
+The public MCP smoke test exercises all four tools against Sony's US sources. No real PSN account grant or personal data was available for testing. Integration requires the application's approved redirect URI, scopes and authorized data endpoints from Sony, followed by a consenting player's test.
+
 ## Try it
 
 > Find ASTRO BOT in the US, show the price and currency of its standard edition, then list this month's PlayStation Plus games with the official source.

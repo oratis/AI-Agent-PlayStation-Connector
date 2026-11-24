@@ -12,6 +12,12 @@ export function handler(upstream: typeof fetch) {
         instructions,
         transport: "streamable-http",
         endpoint: new URL("/mcp", url).href,
+        personal_account: {
+          available: false,
+          reason: "No approved application or gameplay-data permissions configured.",
+          platform_docs:
+            "https://www.playstation.com/en-us/support/account/manage-authorized-apps/",
+        },
         repository: "https://github.com/oratis/" + name,
       });
     }
@@ -26,7 +32,7 @@ export function handler(upstream: typeof fetch) {
       });
     }
 
-    const server = new McpServer({ name, version: "0.1.0" }, { instructions });
+    const server = new McpServer({ name, version: "0.1.1" }, { instructions });
     install(server, new PublicSource(upstream));
     const transport = new WebStandardStreamableHTTPServerTransport({
       sessionIdGenerator: undefined,

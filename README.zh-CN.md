@@ -26,6 +26,18 @@ claude mcp add --transport http --scope user playstation https://playstation-mcp
 
 配置后在 Codex 新开对话，或在 Claude Code 输入 `/mcp` 查看连接状态。
 
+## 能连接我的 PSN 账户吗？
+
+托管版目前**仅提供公开查询**。索尼支持第三方应用授权，玩家可以在账户管理中解除关联。当前 `oratis` 没有获批的 Sony 应用和 PSN 游戏数据权限，因此添加本地址后会直接打开公开工具。 [索尼授权应用说明](https://www.playstation.com/en-us/support/account/manage-authorized-apps/) · [PlayStation Partners](https://partners.playstation.net/)
+
+| 个人数据 | 本次验证结果 |
+| --- | --- |
+| 已购游戏库、个人 Plus 权益 | 无法读取。区域商店和月度名单仅展示当地供应情况。 |
+| 已获得的奖杯 | 无法读取。当前部署无获授权的奖杯数据源。 |
+| 每款游戏的游玩时长 | 无法读取。此次没有取得个人活动记录。 |
+
+线上测试覆盖美国站的四个公开工具。此次没有真实 PSN 授权或个人数据可供验证。接入需要索尼为此应用批准回调地址、授权范围和数据接口，再使用同意授权的玩家账号测试。
+
 ## 试一句
 
 > 查《宇宙机器人》美区标准版的价格和币种，再列出美区 PlayStation Plus 页面上的本月游戏，附官方链接。
